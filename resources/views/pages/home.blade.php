@@ -4,7 +4,7 @@
 Travuix
 @endsection
 
-
+@section('content')
 <!-- Header -->
 <header class="text-center">
     <div class="container">

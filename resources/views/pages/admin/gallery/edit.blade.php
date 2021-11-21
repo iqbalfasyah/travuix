@@ -12,7 +12,7 @@
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
-            @foreach ($errors->all() as $error)
+            @foreach ($errors->all() as $error) 
             <li>{{ $error }}</li>
             @endforeach
         </ul>
@@ -37,9 +37,13 @@
 
                 <div class="form-group">
                     <label for="image">Image</label>
+                    @if ($item->image != null)
+                    <br>
+                        <img src="{{ Storage::url($item->image ) }}" width="auto">
+                    @endif
                     <input type="file" class="form-control" name="image" placeholder="Image" value="{{ $item->image }}">
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                @include('includes.admin.action-submit-continue')
             </form>
         </div>
     </div>

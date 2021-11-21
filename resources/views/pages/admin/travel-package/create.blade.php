@@ -70,7 +70,7 @@
                     <input type="number" class="form-control" name="price" placeholder="Price"
                         value="{{ old('price') }}">
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                @include('includes.admin.action-submit-continue')
             </form>
         </div>
     </div>
