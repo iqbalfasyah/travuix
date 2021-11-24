@@ -9,7 +9,7 @@ class TransactionDetail extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'transaction_id',
+        'transactions_id',
         'username',
         'nationality',
         'is_visa',
@@ -20,6 +20,6 @@ class TransactionDetail extends Model
 
     public function Transaction()
     {
-        return $this->belongsTo(Transaction::class, 'transaction_id', 'id');
+        return $this->belongsTo(Transaction::class, 'transactions_id', 'id');
     }
 }

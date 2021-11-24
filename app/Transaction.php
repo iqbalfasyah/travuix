@@ -20,7 +20,11 @@ class Transaction extends Model
 
     public function TransactionDetail()
     {
-        return $this->hasMany(TransactionDetail::class, 'transaction_id', 'id');
+        return $this->hasMany(
+            TransactionDetail::class,
+            'transactions_id',
+            'id'
+        );
     }
 
     public function TravelPackage()
@@ -34,6 +38,6 @@ class Transaction extends Model
 
     public function User()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
 }

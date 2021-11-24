@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\TravelPackage;
 class HomeController extends Controller
 {
-
     /**
      * Show the application dashboard.
      *
@@ -14,6 +13,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.home');
+        $travelPackages = TravelPackage::with('galleries')
+            ->take(4)
+            ->get();
+        return view('pages.home', [
+            'TravelPackages' => $travelPackages,
+        ]);
     }
 }

@@ -31,7 +31,7 @@
                         @forelse($items as $item)
                             <tr>
                                 <td>{{ $item->id }}</td>
-                                <td>{{ $item->TravelPackcage->title }}</td>
+                                <td>{{ $item->TravelPackage->title }}</td>
                                 <td>{{ $item->User->name }}</td>
                                 <td>{{ $item->additional_visa }}</td>
                                 <td>{{ $item->transaction_total }}</td>
@@ -51,7 +51,7 @@
                                         @csrf
                                         @method('delete')
                                         <button class="btn btn-danger"
-                                            onclick="return confirm('Are you sure you want to delete {{ $item->title }}?');">
+                                            onclick="return confirm('Are you sure you want to delete #{{ $item->id }}?');">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>

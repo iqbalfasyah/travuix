@@ -3,7 +3,7 @@
         <div class="container-fluid">
 
             <a href="{{route('home')}}" class="navbar-brand">
-                <img src="frontend/assets/images/logo.png" alt="logo travuix" />
+                <img src="{{ url('frontend/assets/images/logo.png') }}" alt="logo travuix" />
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-nav"
